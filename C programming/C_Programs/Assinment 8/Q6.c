@@ -1,0 +1,20 @@
+//6 WRITE A PROGRAM TO  WHETHER GIVEN  CHARACTER IS UPPER TO LOWERCASE
+void lowup(int ch);
+#include<stdio.h>
+void main(){
+            char  ch;
+            printf("Enter the character\n");
+            scanf("%c",&ch); 
+            lowup(ch);
+            
+
+            
+}
+void lowup(int ch){
+if(ch >= 'A' && ch <='Z'){
+                printf("upercase character");
+            }else if(ch >='a' && ch <= 'z'){
+                printf("lowercase character");
+            }
+            else{printf("not an alphtabet");}
+}
