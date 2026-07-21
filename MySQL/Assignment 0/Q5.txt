@@ -1,0 +1,15 @@
+5. Write an SQL statement to alter a table named countries to make sure that no
+duplicate data against column country_id will be allowed at the time of
+insertion.
+mysql> insert into country(country_id,country_name,region_id)values(1,"india",101);
+Query OK, 1 row affected (0.04 sec)
+ysql> select * from country;
++------------+--------------+-----------+
+| country_id | country_name | region_id |
++------------+--------------+-----------+
+|          1 | india        |       101 |
++------------+--------------+-----------+
+1 row in set (0.00 sec)
+mysql> INSERT INTO country
+    -> VALUES (1, 'China', 104);
+ERROR 1062 (23000): Duplicate entry '1' for key 'country.PRIMARY'

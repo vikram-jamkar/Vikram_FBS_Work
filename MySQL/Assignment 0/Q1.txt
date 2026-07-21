@@ -1,0 +1,19 @@
+1. Login to MySQL and view all databases already present. You should get
+following result :
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| inmapping          |
+| jun25              |
+| mockeval           |
+| mysql              |
+| performance_schema |
+| quize_app          |
+| sys                |
+| timetable          |
+| trainerdb          |
++--------------------+
+10 rows in set (0.01 sec)
