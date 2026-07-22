@@ -1,0 +1,30 @@
+9) Insert following data in table Member
+Member
+ID
+Member
+Name
+Member
+Address
+Acc_Open_Date Membership_type Fees_Paid Max_Books
+_Allowed
+Penalty_
+Amount
+1 Richa
+Sharma
+Pune 10-12-05 Lifetime 25000 5 50
+2 Garima
+Sen
+Pune current date Annual 1000 3 Null
+
+
+
+mysql> select  * from member;
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+| member_id | member_name  | member_address | acc_open_date | member_type | fees_paid | max_book_allowed | penalty_amount |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+|         1 | Richa Sharma | Pune           | 2005-12-10    | Lifetime    |     25000 |                5 |          50.00 |
+|         2 | garima sen   | pune           | 2026-07-22    | annual      |      1000 |                3 |           NULL |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+2 rows in set (0.00 sec)
+
+mysql>

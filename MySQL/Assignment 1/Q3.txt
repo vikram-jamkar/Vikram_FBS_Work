@@ -1,0 +1,5 @@
+3) Drop the Member table
+mysql> drop table member;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql>
