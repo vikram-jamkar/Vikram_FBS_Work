@@ -1,0 +1,19 @@
+11)  Modify the column Member_name. Decrease the width of the member  name to 20 characters. (If it does not allow state the reason for that)
+mysql> desc memeber;
+ERROR 1146 (42S02): Table 'jun25.memeber' doesn't exist
+mysql> desc member;
++------------------+--------------+------+-----+---------+-------+
+| Field            | Type         | Null | Key | Default | Extra |
++------------------+--------------+------+-----+---------+-------+
+| member_id        | int          | NO   | PRI | NULL    |       |
+| member_name      | varchar(20)  | YES  |     | NULL    |       |
+| member_address   | varchar(20)  | YES  |     | NULL    |       |
+| acc_open_date    | date         | YES  |     | NULL    |       |
+| member_type      | varchar(20)  | YES  |     | NULL    |       |
+| fees_paid        | int          | YES  |     | NULL    |       |
+| max_book_allowed | int          | YES  |     | NULL    |       |
+| penalty_amount   | decimal(7,2) | YES  |     | NULL    |       |
++------------------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql>

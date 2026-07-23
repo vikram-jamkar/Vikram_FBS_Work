@@ -1,0 +1,7 @@
+12) Try to insert a record with Max_Books_Allowed = 110, Observe   the error that comes.  
+sql> INSERT INTO member
+    -> (member_id, member_name, member_address, acc_open_date, member_type, fees_paid, max_book_allowed, penalty_amount)
+    -> VALUES
+    -> (6, 'Vikram', 'Pune', '2026-07-23', 'Annual', 1000, 110, 0);
+ERROR 3819 (HY000): Check constraint 'member_chk_2' is violated.
+mysql>

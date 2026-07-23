@@ -1,0 +1,20 @@
+10) Insert at least 5 records with suitable data.
+mysql> insert into member
+    -> (member_id,member_name,member_address,acc_open_date,member_type,fees_paid,max_book_allowed,penalty_amount)
+    -> values
+    -> (5,'Arjun','solapur','2026-04-9','Lifetime',25000,500,500);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from member;
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+| member_id | member_name  | member_address | acc_open_date | member_type | fees_paid | max_book_allowed | penalty_amount |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+|         1 | Richa Sharma | Pune           | 2005-12-10    | Lifetime    |     25000 |                5 |          50.00 |
+|         2 | garima sen   | pune           | 2026-07-22    | annual      |      1000 |                3 |           NULL |
+|         3 | vikram       | mumbai         | 2026-07-23    | annual      |      1200 |                6 |         500.00 |
+|         4 | tejas        | parbhani       | 2026-03-09    | Lifetime    |     25000 |              100 |         500.00 |
+|         5 | Arjun        | solapur        | 2026-04-09    | Lifetime    |     25000 |              500 |         500.00 |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> 
