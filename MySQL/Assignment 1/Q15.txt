@@ -1,0 +1,25 @@
+15) Drop the table books.
+mysql> use jun25;
+Database changed
+mysql> show tables;
++-----------------+
+| Tables_in_jun25 |
++-----------------+
+| book            |
+| country         |
+| employee        |
+| issu            |
+| job             |
+| job_histry      |
+| member          |
+| member101       |
+| student         |
++-----------------+
+9 rows in set (0.00 sec)
+
+mysql> drop table book;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql>
+
+

@@ -1,0 +1,16 @@
+14) Add the constraints on columns max_books_allowed  and penalty_amt as follows a. max_books_allowed  < 100 b. penalty_amt maximum 1000 Also give names to the constraints. 
+
+mysql> ALTER TABLE Member101
+    -> ADD CONSTRAINT max_book
+    -> CHECK (max_book_allowed < 100);
+Query OK, 5 rows affected (0.06 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql> alter  table Member101
+    -> add constraint  penalty_amount check( penalty_amount <=1000);
+Query OK, 5 rows affected (0.07 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql>
+
