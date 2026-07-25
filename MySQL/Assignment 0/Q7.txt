@@ -1,0 +1,19 @@
+7.Create a Department table with following structure
+mysql> create table  department(
+    -> department_id int,
+    -> department_name varchar(20),
+    -> manager_id double(4,2),
+    -> locatio_name varchar(10),
+    -> primary key (department_id,manager_id));
+Query OK, 0 rows affected, 1 warning (0.09 sec)
+
+mysql> desc department;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| department_id   | int         | NO   | PRI | NULL    |       |
+| department_name | varchar(20) | YES  |     | NULL    |       |
+| manager_id      | double(4,2) | NO   | PRI | NULL    |       |
+| locatio_name    | varchar(10) | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)

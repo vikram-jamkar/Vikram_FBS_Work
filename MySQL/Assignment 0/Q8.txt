@@ -1,0 +1,26 @@
+8. Write an SQL statement to create a table employees including columns employee_id, first_name, last_name, email, phone_number hire_date, job_id, salary, commission, manager_id and department_id and make sure that, the employee_id column does not contain any duplicate value at the time of insertion and the foreign key columns combined by department_id and manager_id columns contain only those unique combination values, which combinations are exists in the departments table. 
+mysql> CREATE TABLE employees (
+    ->     em_id INT PRIMARY KEY,
+    ->     emp_name VARCHAR(20),
+    ->     hire_date DATE,
+    ->     job_id INT,
+    ->     salary DOUBLE(5,2),
+    ->     department_id INT,
+    ->     FOREIGN KEY (department_id)
+    ->     REFERENCES department(department_id)
+    -> );
+Query OK, 0 rows affected, 1 warning (0.08 sec)
+mysql> desc employees;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| em_id         | int         | NO   | PRI | NULL    |       |
+| emp_name      | varchar(20) | YES  |     | NULL    |       |
+| hire_date     | date        | YES  |     | NULL    |       |
+| job_id        | int         | YES  |     | NULL    |       |
+| salary        | double(5,2) | YES  |     | NULL    |       |
+| department_id | int         | YES  | MUL | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+6 rows in set (0.03 sec)
+
+mysql>
