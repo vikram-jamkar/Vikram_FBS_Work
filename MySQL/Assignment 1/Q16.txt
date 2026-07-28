@@ -1,0 +1,12 @@
+Q16 Create table Books again as per the schema description with the following constraints. a. Book_No – Primary Key b. Book_Name – Not Null c. Category – System, Fiction, Database, RDBMS, Others.
+mysql> use jun25;
+Database changed
+mysql> create table book (
+    -> book_no int primary key,
+    -> book_name varchar(20) not null,
+    -> Auther_name varchar(20),
+    -> cost double(5,2),
+    -> Category ENUM('System', 'Fiction', 'Database', 'RDBMS', 'Others'));
+Query OK, 0 rows affected, 1 warning (0.05 sec)
+
+mysql>

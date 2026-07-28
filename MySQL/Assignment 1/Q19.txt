@@ -1,0 +1,50 @@
+19) View the data in the tables using simple SQL query
+mysql> select * from book;
++---------+---------------------+-----------------+--------+----------+
+| book_no | book_name           | Auther_name     | cost   | Category |
++---------+---------------------+-----------------+--------+----------+
+|     101 | Let us c            | Denis Rirchie   | 450.00 | System   |
+|     102 | Oracle-complete Ref | Loni            | 550.00 | Database |
+|     103 | Mastering Sql       | Loni            | 250.00 | Database |
+|     104 | PL SQl-Ref          | Scoot Urman     | 750.00 | Database |
+|     105 | Core Java           | Herbert Schildt | 650.00 | System   |
++---------+---------------------+-----------------+--------+----------+
+5 rows in set (0.00 sec)
+mysql> select * from member;
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+| member_id | member_name  | member_address | acc_open_date | member_type | fees_paid | max_book_allowed | penalty_amount |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+|         1 | Richa Sharma | Pune           | 2005-12-10    | Lifetime    |     25000 | 5                |          50.00 |
+|         2 | garima sen   | pune           | 2026-07-22    | annual      |      1000 | 3                |           NULL |
+|         3 | vikram       | mumbai         | 2026-07-23    | annual      |      1200 | 6                |         500.00 |
+|         4 | tejas        | parbhani       | 2026-03-09    | Lifetime    |     25000 | 100              |         500.00 |
+|         5 | Arjun        | solapur        | 2026-04-09    | Lifetime    |     25000 | 100              |         500.00 |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+5 rows in set (0.05 sec)
+mysql> select * from member101;
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+| member_id | member_name  | member_address | acc_open_date | member_type | fees_paid | max_book_allowed | penalty_amount |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+|         1 | Richa Sharma | Pune           | 2005-12-10    | Lifetime    |     25000 | 5                |          50.00 |
+|         2 | garima sen   | pune           | 2026-07-22    | annual      |      1000 | 3                |           NULL |
+|         3 | vikram       | mumbai         | 2026-07-23    | annual      |      1200 | 6                |         500.00 |
+|         4 | tejas        | parbhani       | 2026-03-09    | Lifetime    |     25000 | 99               |         500.00 |
+|         5 | Arjun        | solapur        | 2026-04-09    | Lifetime    |     25000 | 99               |         500.00 |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+5 rows in set (0.05 sec)
+
+mysql> select * from job;
++--------+-----------+------------+------------+
+| job_id | job_title | min_salary | max_salary |
++--------+-----------+------------+------------+
+|      1 |           |    8000.00 |       NULL |
++--------+-----------+------------+------------+
+1 row in set (0.03 sec)
+
+mysql> select * from job_histry;
+Empty set (0.05 sec)
+
+mysql> select * from  student ;
+Empty set (0.05 sec)
+
+mysql>

@@ -1,0 +1,20 @@
+20) Insert into Book following data. 
+
+
+
+mysql> select * from  student ;
+Empty set (0.05 sec)
+
+mysql> SELECT * FROM book;
++---------+---------------------+-----------------+--------+----------+
+| book_no | book_name           | Auther_name     | cost   | Category |
++---------+---------------------+-----------------+--------+----------+
+|     101 | Let us c            | Denis Rirchie   | 450.00 | System   |
+|     102 | Oracle-complete Ref | Loni            | 550.00 | Database |
+|     103 | Mastering Sql       | Loni            | 250.00 | Database |
+|     104 | PL SQl-Ref          | Scoot Urman     | 750.00 | Database |
+|     105 | Core Java           | Herbert Schildt | 650.00 | System   |
++---------+---------------------+-----------------+--------+----------+
+5 rows in set (0.00 sec)
+
+mysql>
