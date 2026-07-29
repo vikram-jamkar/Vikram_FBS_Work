@@ -1,0 +1,76 @@
+23) As per the given structure Create table Issue again with following constraints.  Lib_Issue_Id-Primary key  Book_No-  foreign key  Member_id - foreign key  Issue_date  Return_date 
+
+
+mysql> CREATE TABLE Issue (
+    ->     Lib_Issue_Id INT PRIMARY KEY,
+    ->     Book_No INT,
+    ->     Member_Id INT,
+    ->     Issue_Date DATE,
+    ->     Return_Date DATE,
+    ->     FOREIGN KEY (Book_No) REFERENCES book(Book_No),
+    ->     FOREIGN KEY (Member_Id) REFERENCES member(Member_Id)
+    -> );
+Query OK, 0 rows affected (0.14 sec)
+
+mysql>
+mysql> CREATE TABLE Issue (
+    ->     Lib_Issue_Id INT PRIMARY KEY,
+    ->     Book_No INT,
+    ->     Member_Id INT,
+    ->     Issue_Date DATE,
+    ->     Return_Date DATE,
+    ->     FOREIGN KEY (Book_No) REFERENCES book(Book_No),
+    ->     FOREIGN KEY (Member_Id) REFERENCES member(Member_Id)
+    -> );
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> SELECT * FROM issue;
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM book;
++---------+---------------------+-----------------+--------+----------+
+| book_no | book_name           | Auther_name     | cost   | Category |
++---------+---------------------+-----------------+--------+----------+
+|     101 | Let us c            | Denis Rirchie   | 450.00 | System   |
+|     102 | Oracle-complete Ref | Loni            | 550.00 | Database |
+|     103 | Mastering Sql       | Loni            | 250.00 | Database |
+|     104 | PL SQl-Ref          | Scoot Urman     | 750.00 | Database |
+|     105 | Core Java           | Herbert Schildt | 650.00 | System   |
++---------+---------------------+-----------------+--------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM member;
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+| member_id | member_name  | member_address | acc_open_date | member_type | fees_paid | max_book_allowed | penalty_amount |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+|         1 | Richa Sharma | Pune           | 2005-12-10    | Lifetime    |     25000 | 5                |          50.00 |
+|         2 | garima sen   | pune           | 2026-07-22    | annual      |      1000 | 3                |           NULL |
+|         3 | vikram       | mumbai         | 2026-07-23    | annual      |      1200 | 6                |         500.00 |
+|         4 | tejas        | parbhani       | 2026-03-09    | Lifetime    |     25000 | 100              |         500.00 |
+|         5 | Arjun        | solapur        | 2026-04-09    | Lifetime    |     25000 | 100              |         500.00 |
++-----------+--------------+----------------+---------------+-------------+-----------+------------------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> DESC issue;
++--------------+------+------+-----+---------+-------+
+| Field        | Type | Null | Key | Default | Extra |
++--------------+------+------+-----+---------+-------+
+| Lib_Issue_Id | int  | NO   | PRI | NULL    |       |
+| Book_No      | int  | YES  | MUL | NULL    |       |
+| Member_Id    | int  | YES  | MUL | NULL    |       |
+| Issue_Date   | date | YES  |     | NULL    |       |
+| Return_Date  | date | YES  |     | NULL    |       |
++--------------+------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> DESCRIBE issue;
++--------------+------+------+-----+---------+-------+
+| Field        | Type | Null | Key | Default | Extra |
++--------------+------+------+-----+---------+-------+
+| Lib_Issue_Id | int  | NO   | PRI | NULL    |       |
+| Book_No      | int  | YES  | MUL | NULL    |       |
+| Member_Id    | int  | YES  | MUL | NULL    |       |
+| Issue_Date   | date | YES  |     | NULL    |       |
+| Return_Date  | date | YES  |     | NULL    |       |
++--------------+------+------+-----+---------+-------+
+5 rows in set (0.00 sec)

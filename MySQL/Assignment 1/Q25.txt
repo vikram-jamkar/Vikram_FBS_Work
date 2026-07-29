@@ -1,0 +1,32 @@
+25) Remove the constraints on Issue table 
+| issue | CREATE TABLE `issue` (
+  `Lib_Issue_Id` int NOT NULL,
+  `Book_No` int DEFAULT NULL,
+  `Member_Id` int DEFAULT NULL,
+  `Issue_Date` date DEFAULT NULL,
+  `Return_Date` date DEFAULT NULL,
+  PRIMARY KEY (`Lib_Issue_Id`),
+  KEY `Book_No` (`Book_No`),
+  KEY `Member_Id` (`Member_Id`),
+  CONSTRAINT `issue_ibfk_1` FOREIGN KEY (`Book_No`) REFERENCES `book` (`book_no`),
+  CONSTRAINT `issue_ibfk_2` FOREIGN KEY (`Member_Id`) REFERENCES `member` (`member_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.03 sec)
+
+mysql> alter table issue
+    -> drop foreign key issue_ibfk_1;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table issue
+    -> drop foreign key issue_ibfk_2;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table issue
+    -> drop primary key;
+Query OK, 1 row affected (0.12 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql>

@@ -1,0 +1,5 @@
+21) Rename the table Lib_Issue to Issue. 
+mysql> RENAME TABLE Lib_issue TO issue ;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql>

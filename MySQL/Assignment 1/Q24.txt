@@ -1,0 +1,7 @@
+24)  Insert following data into Issue table.  Lib_Issu e_Id Book No Member ID 7001 101 1 Issue Date 7002 10-Dec-06 102 2 7003 25-Dec-06 104 1 7004 15-Jan-06 101 1 7005 04-Jul-06 104 2 7006 15-Nov-06 101 3 18-Feb-06 
+mysql> INSERT INTO issue
+    -> VALUES
+    -> (7001, 101, 1, '2026-12-10', '2026-12-20');
+Query OK, 1 row affected (0.03 sec)
+
+mysql>
