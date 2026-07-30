@@ -1,0 +1,5 @@
+29) Try to delete the record of member id 1 from member table and  observe the error . 
+mysql> delete from member
+    -> where member_id = 1;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`jun25`.`issue`, CONSTRAINT `fk_member` FOREIGN KEY (`Member_Id`) REFERENCES `member` (`member_id`))
+mysql>
