@@ -1,0 +1,9 @@
+34) Remove the table Member. 
+mysql> delete from member;
+Query OK, 5 rows affected (0.04 sec)
+mysql> select * from memeber;
+ERROR 1146 (42S02): Table 'jun25.memeber' doesn't exist
+mysql> select * from member;
+Empty set (0.00 sec)
+
+mysql>

@@ -1,0 +1,44 @@
+31) Modify the Return_Date of 7004,7005 to 15 days after the    Issue_date. 
+
+
+mysql> select * from issue;
++--------------+---------+-----------+------------+-------------+
+| Lib_Issue_Id | Book_No | Member_Id | Issue_Date | Return_Date |
++--------------+---------+-----------+------------+-------------+
+|         7001 |     101 |         1 | 2026-12-10 | 2026-12-20  |
++--------------+---------+-----------+------------+-------------+
+1 row in set (0.00 sec)
+
+mysql> update issue
+    -> Set Return_Date ="2026-12-25"
+    -> where Lib_Issue_Id = 7001;
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>
+
+mysql> select * from issue;
++--------------+---------+-----------+------------+-------------+
+| Lib_Issue_Id | Book_No | Member_Id | Issue_Date | Return_Date |
++--------------+---------+-----------+------------+-------------+
+|         7001 |     101 |         1 | 2026-12-10 | 2026-12-25  |
++--------------+---------+-----------+------------+-------------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql> insert  into issue
+    -> (Lib_issue_Id,Book_No,member_Id,Issue_Date,Return_Date)
+    -> values (7002,102,2,'2026-12-11','2026-12-12');
+Query OK, 1 row affected (0.05 sec)
+
+mysql>
+mysql> select * from issue;
++--------------+---------+-----------+------------+-------------+
+| Lib_Issue_Id | Book_No | Member_Id | Issue_Date | Return_Date |
++--------------+---------+-----------+------------+-------------+
+|         7001 |     101 |         1 | 2026-12-10 | 2026-12-25  |
+|         7002 |     102 |         2 | 2026-12-11 | 2026-12-12  |
++--------------+---------+-----------+------------+-------------+
+2 rows in set (0.00 sec)
+
+mysql>
