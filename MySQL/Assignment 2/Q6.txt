@@ -1,0 +1,55 @@
+6. Write a SQL statement to change the email column of employees table with 'not available' for those employees who belongs to the 'Purchasing' department. mysql> SELECT *
+    -> FROM department
+    -> WHERE department_name = 'Purcheasing';
++---------------+-----------------+------------+-------------+
+| department_id | department_name | manager_id | location_id |
++---------------+-----------------+------------+-------------+
+|            30 | Purcheasing     |        114 |        1700 |
++---------------+-----------------+------------+-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT *
+    -> FROM employees
+    -> WHERE department_id = 30;
++-------------+------------+-----------+----------+--------------+------------+---------+---------+----------------+------------+---------------+
+| Employee_Id | First_name | Last_name | Email    | phone_number | Hire_date  | job_id  | salary  | Commission_pct | Manager_Id | Department_id |
++-------------+------------+-----------+----------+--------------+------------+---------+---------+----------------+------------+---------------+
+|         107 | Diana      | Lorentz   | DLORENTZ | 590.423.5567 | 1987-06-24 | IT_PROG | 4620.00 |           0.00 |        114 |            30 |
++-------------+------------+-----------+----------+--------------+------------+---------+---------+----------------+------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> UPDATE employees
+    -> SET email = 'not available'
+    -> WHERE department_id = 30;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM department;
++---------------+-----------------+------------+-------------+
+| department_id | department_name | manager_id | location_id |
++---------------+-----------------+------------+-------------+
+|            10 | Administration  |        200 |        1700 |
+|            20 | Marketing       |        201 |        1800 |
+|            30 | Purcheasing     |        114 |        1700 |
+|            40 | Human Resources |        203 |        2400 |
++---------------+-----------------+------------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employees;
++-------------+------------+-----------+---------------+---------------+------------+---------+----------+----------------+------------+---------------+
+| Employee_Id | First_name | Last_name | Email         | phone_number  | Hire_date  | job_id  | salary   | Commission_pct | Manager_Id | Department_id |
++-------------+------------+-----------+---------------+---------------+------------+---------+----------+----------------+------------+---------------+
+|         100 | steven     | king      | sking         | 515.123.4567  | 1987-06-17 | AD_PRES | 26400.00 |           0.00 |         10 |           200 |
+|         101 | Neena      | Kochhar   | NKOCHHAR      | 515.123.4568  | 1987-06-18 | AD_VP   | 18700.00 |           0.00 |        200 |            10 |
+|         102 | LEX        | Dee Haan  | LDEHAAN       | 515.123.45678 | 1987-06-20 | AD_VP   | 18700.00 |           0.00 |        100 |            90 |
+|         103 | Alexander  | Hunold    | AHUNOLD       | 590.423.4567  | 1987-06-21 | IT_PROG |  6600.00 |           0.00 |        103 |            60 |
+|         104 | Bruce      | Ernst     | BRENST        | 590.423.4568  | 1987-06-21 | IT_PROG |  6600.00 |           0.00 |        103 |            60 |
+|         105 | David      | Austin    | DAUSTIN       | 590.423.4569  | 1987-06-22 | IT_PROG |  5280.00 |           0.00 |        103 |            60 |
+|         106 | Valli      | Pataballa | VPATABAL      | 590.423.4560  | 1987-06-23 | IT_PROG |  5280.00 |           0.00 |        103 |            60 |
+|         107 | Diana      | Lorentz   | not available | 590.423.5567  | 1987-06-24 | IT_PROG |  4620.00 |           0.00 |        114 |            30 |
+|         108 | Nancy      | Greenberg | not available | 515.124.4569  | 1987-06-25 | SA_MAN  | 13200.00 |           0.00 |        145 |            80 |
+|         109 | Daniel     | Faviet    | not available | 515.124.4169  | 1987-06-26 | SA_MAN  |  9900.00 |           0.00 |        145 |            80 |
++-------------+------------+-----------+---------------+---------------+------------+---------+----------+----------------+------------+---------------+
+10 rows in set (0.00 sec)
+
+mysql>

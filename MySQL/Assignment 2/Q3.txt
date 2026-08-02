@@ -1,0 +1,27 @@
+3. Write a SQL statement to insert one row in jobs table to ensure that no duplicate value will be entered in the job_id column. 
+
+mysql> insert into job
+    -> (job_id,job_title,min_salary,max_salary)
+    -> values
+    -> ("Ad_PRES","President",20000,40000),
+    -> ("AV_VP","Administration Vice President",15000,30000),
+    -> ("AD_ASST","Administrion Assistant",3000,6000),
+    -> ("FI_MGR","Finance Manager",8200,16000),
+    -> ("FI_ACCOUNT","public Accountant",4200,9000),
+    -> ("AC_MGR","Account Manager",8200,16000),
+    -> ("AC_ACCOUNT","public Account",4200,20000),
+    -> ("SA_MAN","sale Manager",1000,20000);
+Query OK, 8 rows affected (0.01 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql> INSERT INTO job
+    -> (job_id, job_title, min_salary, max_salary)
+    -> VALUES
+    -> ('IT_PROG', 'Programmer', 4000, 10000);
+Query OK, 1 row affected (0.03 sec)
+
+mysql>
+
+
+ 
