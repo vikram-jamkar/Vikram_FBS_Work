@@ -1,0 +1,47 @@
+class date{
+            int day,month,year;
+            String dow;//reference
+          
+
+            void setday(int d){
+            this.day =d;}
+
+            void setmonth(int m){
+            this.month=m;}
+
+            void setyear(int y){
+            this.year=y;}
+
+
+            void setdow(String s){
+            this.dow =s;}
+       
+          
+                
+           
+}//end date class member 
+
+
+class test{
+            public static void main(String arg[]){
+              date d1;
+               
+               d1 = new date();
+               
+               d1.setday(10);
+               d1.setmonth(5);
+               d1.setyear(2025);
+               d1.setdow("Mon");
+
+
+System.out.println(d1.dow);             System.out.println(d1.day+"/"+d1.month+"/"+d1.year);
+
+              
+
+
+
+}
+
+
+
+}
